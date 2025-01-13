@@ -16,5 +16,5 @@ public class VehicleDto {
 
     private boolean isTollFree;
 
-    private List<Date> tollDates = new ArrayList<>();
+    private List<Date> tollDates;
 }
