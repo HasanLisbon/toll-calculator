@@ -7,6 +7,8 @@ import com.toll.calculator.model.vehicle.VehicleType;
 
 import java.util.List;
 
+import static com.toll.calculator.util.DateUtil.getDatesString;
+
 public class VehicleMapper {
 
     public static VehicleTypeResponseDto toVehicleTypeResponseDto(VehicleType vehicleType){
@@ -32,7 +34,7 @@ public class VehicleMapper {
         dto.setVehicleId(vehicle.getId());
         dto.setRegNumber(vehicle.getRegNumber());
         dto.setVehicleType(vehicle.getVehicleType());
-        dto.setTollDates(vehicle.getTollDates());
+        dto.setTollDates(getDatesString(vehicle.getTollDates()));
 
         return dto;
     }

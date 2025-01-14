@@ -161,9 +161,12 @@ This document contains detailed information about the available API endpoints fo
 
 ### 1. **POST** `/api/v1/toll`
 - Calculate toll charges based on the vehicle registration number and the city code.
+- You can check the available vehicle registration number by the GET request to this endpoint /api/v1/vehicle
+- To get the available city code you can make GET request to this endpoint /api/v1/city 
 
 ### 2. **POST** `/api/v1/toll/vehicle-type`
 - Calculate toll charges for a specific vehicle type in a city at specified toll dates.
+- To check available vehicle type you can make a GET request to this endpoint /api/v1/vehicle-type
 
 Finally How you create the body and all the parameters just look at the swagger url
    ```

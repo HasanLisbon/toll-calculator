@@ -25,6 +25,12 @@ public class DateUtil {
                 .toArray(Date[]::new);
     }
 
+    public static List<String> getDatesString(List<Date> dates)  {
+        return dates.stream()
+                .map(date -> new SimpleDateFormat(DATE_FORMAT, Locale.ENGLISH).format(date))
+                .toList();
+    }
+
     public static Date getDateFromString(String dateStr) throws TollException {
         SimpleDateFormat formatter = new SimpleDateFormat(DATE_FORMAT, Locale.ENGLISH);
         try {

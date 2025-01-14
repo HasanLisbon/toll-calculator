@@ -5,7 +5,6 @@ import com.toll.calculator.model.vehicle.VehicleType;
 import lombok.Data;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -21,6 +20,6 @@ public class VehicleResponseDto {
     private VehicleType vehicleType;
 
     @JsonProperty(TOLL_DATES)
-    private List<Date> tollDates = new ArrayList<>();
+    private List<String> tollDates = new ArrayList<>();
     private static final String TOLL_DATES = "toll_dates";
 }
